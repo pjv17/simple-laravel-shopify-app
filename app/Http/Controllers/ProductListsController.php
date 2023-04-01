@@ -18,7 +18,7 @@ class ProductListsController extends Controller
     {
         $response = Http::withHeaders([
             'Content-Type' => 'application/json',
-            'X-Shopify-Access-Token' => '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',
+            'X-Shopify-Access-Token' => 'your_token_here',
         ])->get('https://the-cut-candidates-store.myshopify.com/admin/api/2023-01/products.json');
 
         return $response->json()['products'];
@@ -32,7 +32,7 @@ class ProductListsController extends Controller
 
         $response = Http::withHeaders([
             'Content-Type' => 'application/json',
-            'X-Shopify-Access-Token' => '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',
+            'X-Shopify-Access-Token' => 'your_token_here',
         ])->get('https://the-cut-candidates-store.myshopify.com/admin/api/2023-01/products.json', [
                 'ids' => $implode_prod_ids,
             ]);
